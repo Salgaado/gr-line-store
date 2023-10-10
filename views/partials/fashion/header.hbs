@@ -1,0 +1,135 @@
+<div class="container-fluid ">
+        {{#if flash.enabled}} {{> components/flash}} {{/if}}
+        {{> components/cookieDisclaimer}}
+        <div class="h-wrapper row align-items-center py-2 px-xl-5">
+            <div class="d-none d-lg-block">
+                  <a href="/" id="logo-wrapper" class="nav-tools__logo-wrapper">
+                    {{#if logo}}
+                    <img  class="img-header" id="image-logo" src="{{logo}}" alt="{{name}}" />
+                    {{else}}
+                    <span class="header--custom-text">
+                        {{name}}
+                    </span>
+                    {{/if}}
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="true" aria-label="Toggle navigation">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            <div class="searchbox col-lg-6 col-6 text-left">
+                <form id="search-form" action="{{home_url}}">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="search-input" name="search-box-tools" placeholder="O que você está procurando?" />
+                        <div class="input-group-append">
+                            <button type="submit" class="input-group-text bg-transparent">
+                                <svg class="group" width="20" height="20" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.10817 16.742C12.4827 16.742 16.029 13.1957 16.029 8.82106C16.029 4.44647 12.4827 0.900162 8.10817 0.900162C3.73357 0.900162 0.187256 4.44647 0.187256 8.82106C0.187256 13.1957 3.73357 16.742 8.10817 16.742Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M13.4193 14.7061L19.4155 20.7023" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </form> 
+            </div>
+              <div class="logo-mobile-container">
+                  <a href="/" id="logo-wrapper" class="nav-tools__logo-wrapper">
+                    {{#if logo}}
+                    <img  class="img-header" id="image-logo" src="{{logo}}" alt="{{name}}" />
+                    {{else}}
+                    <span class="header--custom-text">
+                        {{name}}
+                    </span>
+                    {{/if}}
+                  </a>
+              </div>
+            <div class="iconsbox col-1 text-right">
+                <a href="https://www.grline.com.br/gz/cart" class="btn h-border ">
+                    <svg class="icon-user-circle" width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.1493 0.235291C7.71683 0.235291 0.884644 7.06748 0.884644 15.5C0.884644 23.9325 7.71683 30.7647 16.1493 30.7647C24.5819 30.7647 31.414 23.9325 31.414 15.5C31.414 7.06748 24.5819 0.235291 16.1493 0.235291ZM16.1493 6.14421C19.1407 6.14421 21.5659 8.56933 21.5659 11.5607C21.5659 14.5521 19.1407 16.9772 16.1493 16.9772C13.158 16.9772 10.7328 14.5521 10.7328 11.5607C10.7328 8.56933 13.158 6.14421 16.1493 6.14421ZM16.1493 27.3178C12.5363 27.3178 9.29869 25.6806 7.13209 23.12C8.28926 20.9411 10.5543 19.4393 13.1949 19.4393C13.3426 19.4393 13.4903 19.4639 13.6319 19.507C14.4321 19.7655 15.2692 19.9317 16.1493 19.9317C17.0295 19.9317 17.8728 19.7655 18.6668 19.507C18.8084 19.4639 18.9561 19.4393 19.1038 19.4393C21.7444 19.4393 24.0094 20.9411 25.1666 23.12C23 25.6806 19.7624 27.3178 16.1493 27.3178Z" fill="white"/>
+                    </svg>   
+                </a>
+                <a href="https://www.grline.com.br/gz/cart"  class="btn h-border">
+                    <svg class="icon-shopping-cart" width="31" height="29" viewBox="0 0 31 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M28.1174 16.902L30.623 5.8775C30.8039 5.08151 30.1988 4.32352 29.3826 4.32352H8.56415L8.07833 1.94848C7.95727 1.3565 7.43636 0.931366 6.83208 0.931366H1.39779C0.695244 0.931366 0.125732 1.50088 0.125732 2.20342V3.05146C0.125732 3.75401 0.695244 4.32352 1.39779 4.32352H5.10176L8.82508 22.5264C7.93432 23.0387 7.33407 23.9992 7.33407 25.1005C7.33407 26.7397 8.66294 28.0686 10.3022 28.0686C11.9415 28.0686 13.2703 26.7397 13.2703 25.1005C13.2703 24.2697 12.9286 23.5192 12.3786 22.9804H23.4904C22.9405 23.5192 22.5988 24.2697 22.5988 25.1005C22.5988 26.7397 23.9276 28.0686 25.5669 28.0686C27.2062 28.0686 28.535 26.7397 28.535 25.1005C28.535 23.9253 27.8519 22.9098 26.8613 22.4289L27.1537 21.1422C27.3346 20.3462 26.7296 19.5882 25.9133 19.5882H11.6865L11.3396 17.8922H26.877C27.4709 17.8922 27.9858 17.4812 28.1174 16.902Z" fill="white"/>
+                    </svg>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- Navbar Start -->
+    <div class=" h-wrapper container-fluid">
+    <nav class="navbar navbar-full navbar-expand-lg ">
+    <div class="container-fluid container-fluid-mobile">
+      <div class="box">
+        <div class="container-4">
+          <form class="form-mobile" id="search-form-responsive" novalidate="">
+            <input type="search" placeholder="Procurando?"  id="search-input-responsive" required="" autocomplete="off"/>
+            <button  type="submit" id="nav-search-button">
+              <span class=" icon-search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                  <path d="M22.1117 19.8884H21.0469L20.6696 19.5245C21.9904 17.988 22.7856 15.9933 22.7856 13.8234C22.7856 8.98498 18.8636 5.06299 14.0251 5.06299C9.18664 5.06299 5.26465 8.98498 5.26465 13.8234C5.26465 18.6619 9.18664 22.5839 14.0251 22.5839C16.195 22.5839 18.1897 21.7887 19.7261 20.4679L20.09 20.8453V21.91L26.8288 28.6354L28.837 26.6272L22.1117 19.8884ZM14.0251 19.8884C10.6692 19.8884 7.96017 17.1794 7.96017 13.8234C7.96017 10.4675 10.6692 7.75851 14.0251 7.75851C17.381 7.75851 20.09 10.4675 20.09 13.8234C20.09 17.1794 17.381 19.8884 14.0251 19.8884Z" fill="white"/>
+                </svg>
+              </span>
+            </button>
+          </form>
+          {{!-- <input  type="search" id="search-input-responsive" required="" autocomplete="off"/ placeholder="O que você está procurando?" />
+          <button class="icon" type="submit" id="nav-search-button"><i class="fa fa-search"></i></button> --}}
+        </div>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <nav class="cssmenu_full_container">
+          <ul class="css-menu-dropend">
+            <li class="menu-list">
+              <span><a href="https://www.grline.com.br/corrente-sinaliza%C3%A7%C3%A3o" >
+                <img src="https://i.postimg.cc/MKzZxsSR/icon-Link.png">
+                Corrente plastica
+              </a>
+              </span>
+            </li>
+            <li class="menu-list">
+              <span><a href="https://www.grline.com.br/pedestal" >
+                <img src="https://i.postimg.cc/ZnHSCSSN/pedestal-2.png">
+                Pedestal Isolamento
+              </a>
+              </span>
+            </li>
+            <li class="menu-list">
+              <span><a href="https://www.grline.com.br/fitas-perigo" >
+                <img src="https://i.postimg.cc/15zxJbSW/fita-adesiva-2.png">
+                Fita demarcação
+              </a> 
+              </span>
+            </li>
+            <li class="menu-list">
+              <span><a href="https://www.grline.com.br/cone-sinaliza%C3%A7%C3%A3o" >
+                <img src="https://i.postimg.cc/PrC3LHTk/cone-2.png">
+                Cone Sinalização
+              </a>
+              </span>
+            </li>
+            <li class="menu-list">
+              <span><a href="https://www.grline.com.br/fita-antiderrapante" >
+                <img src="https://i.postimg.cc/15zxJbSW/fita-adesiva-2.png">
+                Fita Antiderrapante
+              </a>  
+              </span>
+            </li>
+            <a  class="whatsApp_btn" href="https://api.whatsapp.com/send?phone=5519983347482&text=Ol%C3%A1!%20estou%20na%20loja%20GRLINE%20Loja%20de%20Sinaliza%C3%A7%C3%A3o%20e%20gostaria%20de%20uma%20cota%C3%A7%C3%A3o." target="_blank">
+                <div class="whatsa-app-hover">
+                    <svg class="icon-what-s-app" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17.5045 2.99448C15.6339 1.11948 13.1429 0.0882263 10.4955 0.0882263C5.03125 0.0882263 0.584821 4.53466 0.584821 9.99894C0.584821 11.7445 1.04018 13.4498 1.90625 14.9543L0.5 20.0882L5.75446 18.7088C7.20089 19.4989 8.83036 19.9141 10.4911 19.9141H10.4955C15.9554 19.9141 20.5 15.4677 20.5 10.0034C20.5 7.35608 19.375 4.86948 17.5045 2.99448ZM10.4955 18.2445C9.01339 18.2445 7.5625 17.8472 6.29911 17.0972L6 16.9186L2.88393 17.7355L3.71429 14.6954L3.51786 14.3829C2.69196 13.0704 2.25893 11.557 2.25893 9.99894C2.25893 5.45876 5.95536 1.76233 10.5 1.76233C12.7009 1.76233 14.7679 2.61948 16.3214 4.17751C17.875 5.73555 18.8304 7.80251 18.8259 10.0034C18.8259 14.548 15.0357 18.2445 10.4955 18.2445ZM15.0134 12.0748C14.7679 11.9498 13.5491 11.3516 13.3214 11.2713C13.0938 11.1864 12.9286 11.1463 12.7634 11.3963C12.5982 11.6463 12.125 12.1998 11.9777 12.3695C11.8348 12.5347 11.6875 12.557 11.442 12.432C9.98661 11.7043 9.03125 11.1329 8.07143 9.48555C7.81696 9.04805 8.32589 9.0793 8.79911 8.13287C8.87946 7.96769 8.83929 7.82483 8.77679 7.69983C8.71429 7.57483 8.21875 6.35608 8.01339 5.86055C7.8125 5.37841 7.60714 5.44537 7.45536 5.43644C7.3125 5.42751 7.14732 5.42751 6.98214 5.42751C6.81696 5.42751 6.54911 5.49001 6.32143 5.73555C6.09375 5.98555 5.45536 6.58376 5.45536 7.80251C5.45536 9.02126 6.34375 10.1998 6.46429 10.365C6.58929 10.5302 8.20982 13.0302 10.6964 14.1061C12.2679 14.7847 12.8839 14.8427 13.6696 14.7266C14.1473 14.6552 15.1339 14.1284 15.3393 13.548C15.5446 12.9677 15.5446 12.4722 15.4821 12.3695C15.4241 12.2579 15.2589 12.1954 15.0134 12.0748Z" fill="white"/>
+                    </svg>
+                    <div class="solicite-uma-cota" >
+                      Solicite uma Cotação 
+                    </div>
+                </div>
+            </a>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </nav>
+
+  
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
